@@ -43,6 +43,8 @@ class Log4r::Logger
   def formatter
   end
 end
+class Log4r::CustomConsoleFormatter < Log4r::Formatter
+end
 
 
 ```
