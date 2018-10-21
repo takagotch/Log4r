@@ -40,6 +40,10 @@ require 'log4r'
 require 'log4r/outputter/datefileoutputter'
 
 class Log4r::Logger
+  def formatter
+  end
+end
+
 
 ```
 
