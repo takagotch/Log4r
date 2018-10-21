@@ -45,6 +45,11 @@ class Log4r::Logger
 end
 class Log4r::CustomConsoleFormatter < Log4r::Formatter
   def format(event)
+    if event.data.present?
+      sprintf(
+      
+        event.data)
+    end
   emd
 end
 class Log4r::CustomFileFormatter < Log4r::Formatter
