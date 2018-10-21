@@ -47,7 +47,8 @@ class Log4r::CustomConsoleFormatter < Log4r::Formatter
   def format(event)
     if event.data.present?
       sprintf(
-      
+        MaxLevelLength,
+        LNAMES[event.level],
         event.data)
     end
   emd
