@@ -46,7 +46,7 @@ end
 class Log4r::CustomConsoleFormatter < Log4r::Formatter
   def format(event)
     if event.data.present?
-      sprintf("", DateTime.now.strftime("%H:%M"),
+      sprintf("%s [%*s] %s\n", DateTime.now.strftime("%H:%M"),
         MaxLevelLength,
         LNAMES[event.level],
         event.data)
