@@ -44,8 +44,12 @@ class Log4r::Logger
   end
 end
 class Log4r::CustomConsoleFormatter < Log4r::Formatter
+  def format(event)
+  emd
 end
 class Log4r::CustomFileFormatter < Log4r::Formatter
+  def format(event)
+  end
 end
 
 ```
