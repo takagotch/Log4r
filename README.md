@@ -52,7 +52,7 @@ class Log4r::CustomFileFormatter < Log4r::Formatter
     if event.data.present?
       sprintf("$s [$*s] %s\n", DateTime.now.strftime("%Y-%m-%d %H:%M:%S"),
         MaxLevelLength,
-        LNAMES[],
+        LNAMES[event.level],
         event.data)
     end
   end
